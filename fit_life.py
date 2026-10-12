@@ -1,6 +1,6 @@
 # Проект FitLife - MVP версия 1.0
+import sys
 # Константные значения проекта
-
 # норма воды на 1 кг веса
 WATER_PER_KG = 30
 # коэффициент перевода милилитров в литры
@@ -21,11 +21,14 @@ while True:
 while True:
     try:
         user_age = int(input('Введите свой возраст: '))
-        if user_age <= 0:
-            print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
-    except:
+        if 0 <= user_age >= 120:
+            print('Ошибка! Вероятно, вы ввели неверный возраст. Вы ввели:', user_age)
+    except ValueError:
         print('Введено неверное значение! Используйте целые числа.')
         print('Ожидаемый формат: 24')
+    except KeyboardInterrupt:
+        print("Вы завершили программу")
+        sys.exit()
     else:
         break
 
@@ -33,22 +36,28 @@ while True:
 while True:
     try:
         user_weight = float(input('Введите свой текущий вес (кг): '))
-        if user_weight <= 0:
-            print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
-    except:
+        if 0 <= user_weight >= 300:
+            print('Ошибка! Вероятно, вы ввели неверный вес. Вы ввели:', user_weight)
+    except ValueError:
         print('Введено неверное значение! Используйте числа с разделителем в виде точки.')
         print('Ожидаемый формат: 93.2')
+    except KeyboardInterrupt:
+        print("Вы завершили программу")
+        sys.exit()
     else:
         break
 
 while True:
     try:
         user_height = float(input('Введите свой рост (м): '))
-        if user_height <= 0:
-            print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
-    except:
+        if 0 <= user_height >= 2.5:
+            print('Ошибка! Вероятно введён неверный рост. Вы ввели:', user_height)
+    except ValueError:
         print('Введено неверное значение! Введите свой рост в метрах с разделителем в виде точки.')
         print('Ожидаемый формат: 1.92')
+    except KeyboardInterrupt:
+        print("Вы завершили программу")
+        sys.exit()
     else:
         break
 print()
