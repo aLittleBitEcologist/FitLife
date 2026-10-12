@@ -1,12 +1,10 @@
+# Проект FitLife - MVP версия 1.0
 """Module providing a function for interrupting incorrect input"""
 import sys
-# Проект FitLife - MVP версия 1.0
 
 # Константные значения проекта
-# норма воды на 1 кг веса
-WATER_PER_KG = 30
-# коэффициент перевода милилитров в литры
-ML_TO_L = 1000
+WATER_PER_KG = 30   # норма воды на 1 кг веса
+ML_TO_L = 1000      # коэффициент перевода милилитров в литры
 
 # 1. Знакомство
 print('Привет! Я консольный бот помощник FitLife.')
@@ -24,7 +22,7 @@ while True:
     try:
         user_age = int(input('Введите свой возраст: '))
         if 0 <= user_age >= 120:
-            print('Ошибка! Вероятно, вы ввели неверный возраст. Вы ввели:', user_age)
+            print('Ошибка! Вы ввели неверный возраст. Вы ввели:', user_age)
     except ValueError:
         print('Введено неверное значение! Используйте целые числа.')
         print('Ожидаемый формат: 24')
@@ -39,9 +37,9 @@ while True:
     try:
         user_weight = float(input('Введите свой текущий вес (кг): '))
         if 0 <= user_weight >= 300:
-            print('Ошибка! Вероятно, вы ввели неверный вес. Вы ввели:', user_weight)
+            print('Ошибка! Вы ввели неверный вес. Вы ввели:', user_weight)
     except ValueError:
-        print('Введено неверное значение! Используйте числа с разделителем в виде точки.')
+        print('Введено неверное значение! Вы ввели:', user_weight)
         print('Ожидаемый формат: 93.2')
     except KeyboardInterrupt:
         print("Вы завершили программу")
@@ -53,9 +51,9 @@ while True:
     try:
         user_height = float(input('Введите свой рост (м): '))
         if 0 <= user_height >= 2.5:
-            print('Ошибка! Вероятно введён неверный рост. Вы ввели:', user_height)
+            print('Ошибка! Введён неверный рост. Вы ввели:', user_height)
     except ValueError:
-        print('Введено неверное значение! Введите свой рост в метрах с разделителем в виде точки.')
+        print('Введено неверное значение! Вы ввели:', user_height)
         print('Ожидаемый формат: 1.92')
     except KeyboardInterrupt:
         print("Вы завершили программу")
