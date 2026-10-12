@@ -1,5 +1,7 @@
-# Проект FitLife - MVP версия 1.0
+"""Module providing a function for interrupting incorrect input"""
 import sys
+# Проект FitLife - MVP версия 1.0
+
 # Константные значения проекта
 # норма воды на 1 кг веса
 WATER_PER_KG = 30
