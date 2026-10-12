@@ -16,36 +16,36 @@ while True:
     if not user_name.strip():
         print('Ошибка! Имя не может быть пустым.')
     else:
-         break
+        break
 
 while True:
     try:
         user_age = int(input('Введите свой возраст: '))
         if user_age <= 0:
-             print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
+            print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
     except:
         print('Введено неверное значение! Используйте целые числа.')
         print('Ожидаемый формат: 24')
     else:
-            break
+        break
 
 # 2. Сбор данных
 while True:
     try:
         user_weight = float(input('Введите свой текущий вес (кг): '))
         if user_weight <= 0:
-                     print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
+            print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
     except:
         print('Введено неверное значение! Используйте числа с разделителем в виде точки.')
         print('Ожидаемый формат: 93.2')
     else:
-            break
+        break
 
 while True:
     try:
         user_height = float(input('Введите свой рост (м): '))
         if user_height <= 0:
-                     print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
+            print('Ошибка! Значение должно быть больше 0. Вы ввели:', user_age)
     except:
         print('Введено неверное значение! Введите свой рост в метрах с разделителем в виде точки.')
         print('Ожидаемый формат: 1.92')
