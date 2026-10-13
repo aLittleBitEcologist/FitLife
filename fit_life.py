@@ -38,7 +38,8 @@ while True:
 # 2. Сбор данных
 while True:
     try:
-        user_weight = float(input('Введите свой текущий вес в кг (Пример: 93.2): '))
+        user_weight = float(
+            input('Введите свой текущий вес в кг (Пример: 93.2): '))
         if MIN_VALUE <= user_weight >= MAX_WEIGHT:
             print('Ошибка! Вы ввели неверный вес. Вы ввели:',
                   user_weight, '\n')
